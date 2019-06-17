@@ -12,8 +12,8 @@ const server = http.createServer((req, res) => {
     return;
   }
   if (['GET', 'POST'].indexOf(req.method) > -1) {
-    res.writeHead(200, headers);
-    res.end('Hello World');
+    res.writeHead(301, { Location: 'https://rest-server-mobile-chat.herokuapp.com' });
+    res.end();
     return;
   }
   res.writeHead(405, headers);
